@@ -1,17 +1,15 @@
 ---
-# Only the main Sass file needs front matter (the dashes are needed)
 ---
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
 
 /* Claude-inspired Custom Styling */
-
 :root {
-  --background-color: #faf7f0;  /* Rustic off-yellow beige */
-  --text-color: #2c2c2c;        /* Dark gray for readability */
-  --accent-color: #8b7355;      /* Warm brown accent */
-  --light-accent: #f5f2ea;      /* Lighter beige for cards/sections */
+  --background-color: #faf7f0;
+  --text-color: #2c2c2c;
+  --accent-color: #8b7355;
+  --light-accent: #f5f2ea;
 }
 
 /* Main background */
@@ -29,33 +27,138 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* Main content area styling */
-.page__content,
-.archive,
-.layout--single .page__content {
-  background-color: var(--background-color) !important;
+/* Title bar styling */
+.masthead {
+  background-color: var(--light-accent) !important;
+  border-bottom: 2px solid var(--accent-color);
+  padding: 1rem 0;
+}
+
+.site-title {
+  font-family: "Playfair Display", serif !important;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+}
+
+.site-title:hover {
+  color: var(--accent-color) !important;
 }
 
 /* Navigation styling */
 .greedy-nav {
-  background-color: var(--light-accent) !important;
-  border-bottom: 1px solid var(--accent-color);
+  background-color: var(--background-color) !important;
+  border-bottom: 1px solid #e8e2d4;
+}
+
+.greedy-nav .navigation-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
 .greedy-nav a {
   color: var(--text-color) !important;
   font-family: "Crimson Text", serif !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 6px;
+  background-color: var(--light-accent);
+  transition: all 0.3s ease;
 }
 
-/* Card/post styling */
-.archive__item,
+.greedy-nav a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--background-color) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.2);
+}
+
+/* Main content area */
+.page__content {
+  background-color: var(--background-color) !important;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Blog post entries on homepage */
 .list__item {
   background-color: var(--light-accent) !important;
   border: 1px solid #e8e2d4;
   border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
   box-shadow: 0 2px 4px rgba(139, 115, 85, 0.1);
+  transition: all 0.3s ease;
+}
+
+.list__item:hover {
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+  transform: translateY(-2px);
+}
+
+.archive__item-title {
+  font-family: "Playfair Display", serif !important;
+  color: var(--text-color) !important;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.archive__item-title a {
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+}
+
+.archive__item-title a:hover {
+  color: var(--accent-color) !important;
+}
+
+.archive__item-excerpt {
+  color: #5a5a5a;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Post meta information */
+.page__meta {
+  font-size: 0.9rem;
+  color: var(--accent-color) !important;
+  font-style: italic;
+}
+
+/* Read more link */
+.archive__item-teaser + .archive__item-body .archive__item-excerpt p:last-child a {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pagination a, .pagination span {
+  padding: 0.75rem 1rem;
+  margin: 0 0.25rem;
+  background-color: var(--light-accent);
+  border: 1px solid var(--accent-color);
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color) !important;
 }
 
 /* Links */
@@ -69,74 +172,19 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Buttons */
-.btn {
-  background-color: var(--accent-color) !important;
-  color: var(--background-color) !important;
-  border: none !important;
-  font-family: "Crimson Text", serif !important;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #6b5940 !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.2);
-}
-
-/* Code blocks - keep readable */
-pre, code {
-  background-color: #f0ebe1 !important;
-  border: 1px solid #e8e2d4;
-  font-family: "SF Mono", "Monaco", "Inconsolata", monospace !important;
-}
-
-/* Sidebar styling */
-.sidebar {
-  background-color: var(--light-accent) !important;
-  border-right: 1px solid var(--accent-color);
+/* Individual page styling */
+.page__title {
+  font-family: "Playfair Display", serif !important;
+  color: var(--text-color) !important;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Footer */
 .page__footer {
   background-color: var(--light-accent) !important;
   color: var(--text-color) !important;
-  border-top: 1px solid var(--accent-color);
-}
-
-/* Masthead (header area) */
-.masthead {
-  background-color: var(--light-accent) !important;
-  border-bottom: 2px solid var(--accent-color);
-}
-
-.site-title {
-  font-family: "Playfair Display", serif !important;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-color) !important;
-}
-
-/* Blog post styling */
-.page__title {
-  font-family: "Playfair Display", serif !important;
-  color: var(--text-color) !important;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 0.5rem;
-}
-
-/* Feature row (homepage cards) */
-.feature__item {
-  background-color: var(--light-accent) !important;
-  border: 1px solid #e8e2d4;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.1);
-}
-
-.archive__item-title {
-  font-family: "Playfair Display", serif !important;
-  color: var(--text-color) !important;
+  border-top: 2px solid var(--accent-color);
+  margin-top: 3rem;
 }
