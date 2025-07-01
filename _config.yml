@@ -1,0 +1,38 @@
+title: Cezar Prodan
+description: Professional Portfolio & Blog
+url: "https://cezarprodan.com"
+baseurl: ""
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Site Author
+author:
+  name: "Cezar Prodan"
+  bio: "Data Scientist, ML Researcher"
+  location: "London"
+  email: "test@gmail.com"
+  #links:
+  #  - label: "LinkedIn"
+  #    icon: "fab fa-fw fa-linkedin"
+  #    url: "https://linkedin.com/in/yourprofile"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Pagination
+paginate: 5
+paginate_path: /blog/page:num/
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name/
