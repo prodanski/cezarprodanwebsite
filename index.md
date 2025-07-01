@@ -5,9 +5,6 @@ excerpt: "Data Science, ML Research"
 header:
   overlay_color: "#8b7355"
   overlay_filter: "0.3"
-
-intro: 
-  - excerpt: 'Here you'll find my work, thoughts, and ongoing projects in Data Science and ML. Thank you, Claude.'
 feature_row:
   - title: "Curriculum Vitae"
     excerpt: "A comprehensive view of my background, skills, and accomplishments."
