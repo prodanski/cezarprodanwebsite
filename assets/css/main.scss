@@ -1,0 +1,142 @@
+---
+# Only the main Sass file needs front matter (the dashes are needed)
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Claude-inspired Custom Styling */
+
+:root {
+  --background-color: #faf7f0;  /* Rustic off-yellow beige */
+  --text-color: #2c2c2c;        /* Dark gray for readability */
+  --accent-color: #8b7355;      /* Warm brown accent */
+  --light-accent: #f5f2ea;      /* Lighter beige for cards/sections */
+}
+
+/* Main background */
+body {
+  background-color: var(--background-color) !important;
+  font-family: "Crimson Text", "Times New Roman", "Georgia", serif !important;
+  color: var(--text-color) !important;
+  line-height: 1.6;
+}
+
+/* Headers with serif fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", "Crimson Text", "Times New Roman", serif !important;
+  color: var(--text-color) !important;
+  font-weight: 600;
+}
+
+/* Main content area styling */
+.page__content,
+.archive,
+.layout--single .page__content {
+  background-color: var(--background-color) !important;
+}
+
+/* Navigation styling */
+.greedy-nav {
+  background-color: var(--light-accent) !important;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.greedy-nav a {
+  color: var(--text-color) !important;
+  font-family: "Crimson Text", serif !important;
+}
+
+/* Card/post styling */
+.archive__item,
+.list__item {
+  background-color: var(--light-accent) !important;
+  border: 1px solid #e8e2d4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(139, 115, 85, 0.1);
+}
+
+/* Links */
+a {
+  color: var(--accent-color) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6b5940 !important;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--accent-color) !important;
+  color: var(--background-color) !important;
+  border: none !important;
+  font-family: "Crimson Text", serif !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6b5940 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.2);
+}
+
+/* Code blocks - keep readable */
+pre, code {
+  background-color: #f0ebe1 !important;
+  border: 1px solid #e8e2d4;
+  font-family: "SF Mono", "Monaco", "Inconsolata", monospace !important;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: var(--light-accent) !important;
+  border-right: 1px solid var(--accent-color);
+}
+
+/* Footer */
+.page__footer {
+  background-color: var(--light-accent) !important;
+  color: var(--text-color) !important;
+  border-top: 1px solid var(--accent-color);
+}
+
+/* Masthead (header area) */
+.masthead {
+  background-color: var(--light-accent) !important;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.site-title {
+  font-family: "Playfair Display", serif !important;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color) !important;
+}
+
+/* Blog post styling */
+.page__title {
+  font-family: "Playfair Display", serif !important;
+  color: var(--text-color) !important;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Feature row (homepage cards) */
+.feature__item {
+  background-color: var(--light-accent) !important;
+  border: 1px solid #e8e2d4;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.1);
+}
+
+.archive__item-title {
+  font-family: "Playfair Display", serif !important;
+  color: var(--text-color) !important;
+}
