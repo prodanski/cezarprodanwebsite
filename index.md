@@ -5,6 +5,7 @@ excerpt: "Data Science, ML Research"
 header:
   overlay_color: "#8b7355"
   overlay_filter: "0.3"
+
 intro: 
   - excerpt: 'Here you'll find my work, thoughts, and ongoing projects in Data Science and ML. Thank you, Claude.'
 feature_row:
@@ -31,4 +32,4 @@ feature_row:
 
 ---
 
-
+*"Standing on the shoulders of giants. Except they are so tall, I can't see their feet anymore!"*
