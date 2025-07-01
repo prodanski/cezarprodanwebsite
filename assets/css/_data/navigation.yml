@@ -1,8 +1,0 @@
-# Main navigation links
-main:
-  - title: "CV"
-    url: /cv/
-  - title: "Contact"
-    url: /contact/
-  - title: "Blog"
-    url: /blog/
