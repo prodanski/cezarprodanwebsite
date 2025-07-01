@@ -40,3 +40,11 @@ collections:
 # Fonts
 head_scripts:
   - https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap
+
+# Add this section to your _config.yml
+minimal_mistakes_skin: "default" # We'll override with custom CSS
+
+# Custom styling
+scss:
+  sass_dir: _sass
+  style: compressed
