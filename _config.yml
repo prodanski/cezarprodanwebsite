@@ -1,60 +1,26 @@
-title: "Cezar Prodan"
-description: "Data Science, ML Research, Product Recommendation"
+title: Cezar Prodan
+description: Personal website and blog
 url: "https://cezarprodan.com"
 baseurl: ""
-
-# Theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-
-# Site Author
-author:
-  name: "Cezar Prodan"
-  bio: "Data Scientist, ML Researcher in Product Recommendation Algorithms"
-  location: "London"
-  email: "test@gmail.com"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/cezarprodan"
-
-# Navigation
-header_pages:
-  - cv.md
-  - contact.md
-  - blog.md
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-include-cache
-
-# Pagination for homepage
-paginate: 10
-paginate_path: /page:num/
-
-# Google Fonts
-head_scripts:
-  - https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap
+permalink: /:categories/:year/:month/:day/:title/
 
 # Collections
 collections:
-  portfolio:
+  posts:
     output: true
-    permalink: /:collection/:name/
+    permalink: /blog/:year/:month/:day/:title/
 
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      comments: false
-      share: false
-      related: false
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
