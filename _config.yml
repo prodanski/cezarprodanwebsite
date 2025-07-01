@@ -1,5 +1,5 @@
-title: Cezar Prodan
-description: Professional Portfolio & Blog
+title: "Cezar Prodan"
+description: "Data Science, ML Research, Product Recommendation"
 url: "https://cezarprodan.com"
 baseurl: ""
 
@@ -9,13 +9,28 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 # Site Author
 author:
   name: "Cezar Prodan"
-  bio: "Data Scientist, ML Researcher"
+  bio: "Data Scientist, ML Researcher in Product Recommendation Algorithms"
   location: "London"
   email: "test@gmail.com"
-  #links:
-  #  - label: "LinkedIn"
-  #    icon: "fab fa-fw fa-linkedin"
-  #    url: "https://linkedin.com/in/yourprofile"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/cezarprodan"
+
+# Navigation
+header_pages:
+  - cv.md
+  - contact.md
+  - blog.md
+
+# Main navigation
+main:
+  - title: "CV"
+    url: /cv/
+  - title: "Contact" 
+    url: /contact/
+  - title: "Blog"
+    url: /blog/
 
 # Build settings
 markdown: kramdown
@@ -23,28 +38,32 @@ highlighter: rouge
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
 
-# Pagination
-paginate: 5
-paginate_path: /blog/page:num/
+# Pagination for homepage
+paginate: 10
+paginate_path: /page:num/
+
+# Google Fonts
+head_scripts:
+  - https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap
 
 # Collections
 collections:
   portfolio:
     output: true
     permalink: /:collection/:name/
-    
-# Fonts
-head_scripts:
-  - https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap
 
-# Add this section to your _config.yml
-minimal_mistakes_skin: "default" # We'll override with custom CSS
-
-# Custom styling
-scss:
-  sass_dir: _sass
-  style: compressed
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: false
+      related: false
