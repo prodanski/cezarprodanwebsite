@@ -23,15 +23,6 @@ header_pages:
   - contact.md
   - blog.md
 
-# Main navigation
-main:
-  - title: "CV"
-    url: /cv/
-  - title: "Contact" 
-    url: /contact/
-  - title: "Blog"
-    url: /blog/
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
