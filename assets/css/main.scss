@@ -47,19 +47,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navigation styling */
+/* Navigation styling - Fixed version */
 .greedy-nav {
   background-color: var(--background-color) !important;
   border-bottom: 1px solid #e8e2d4;
+  padding: 0.5rem 0 !important;
 }
 
-.greedy-nav .navigation-menu {
+/* Style the navigation container */
+.greedy-nav .visible-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.greedy-nav a {
+/* Style each navigation link */
+.greedy-nav .visible-links a {
   color: var(--text-color) !important;
   font-family: "Crimson Text", serif !important;
   font-size: 1.1rem;
@@ -70,13 +74,44 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 6px;
   background-color: var(--light-accent);
   transition: all 0.3s ease;
+  margin: 0.25rem;
 }
 
-.greedy-nav a:hover {
+/* Hover effects for navigation */
+.greedy-nav .visible-links a:hover {
   background-color: var(--accent-color) !important;
   color: var(--background-color) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(139, 115, 85, 0.2);
+}
+
+/* Keep the site title styled nicely */
+.site-title {
+  font-family: "Playfair Display", serif !important;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.site-title:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Ensure proper layout */
+.masthead {
+  background-color: var(--light-accent) !important;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.masthead__inner-wrap {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Main content area */
