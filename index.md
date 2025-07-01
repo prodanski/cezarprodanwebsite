@@ -31,4 +31,4 @@ feature_row:
 
 ---
 
-*"Standing on the shoulders of giants. Except they are so tall, I can't see their feet anymore!"*
+
