@@ -27,7 +27,14 @@ header {
     background-color: var(--header-bg);
     color: var(--header-text);
     padding: 2rem 0;
-    text-align: center;
+    text-align: left;  /* <-- Changed to left */
+}
+
+/* Add this new rule to contain header content */
+header > * {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 header h1 {
