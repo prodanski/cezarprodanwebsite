@@ -75,6 +75,25 @@ main h2 {
     color: var(--header-bg);
 }
 
+/* Introduction section */
+.intro {
+    background-color: var(--box-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
 /* Blog post preview boxes */
 .blog-post-preview {
     background-color: var(--box-bg);
