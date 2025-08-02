@@ -134,7 +134,7 @@ main h2 {
     background-color: var(--box-bg);
     padding: 2rem;
     border-radius: 8px;
-    font-size: 4.1rem;
+    font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -170,14 +170,6 @@ main h2 {
 mjx-container[jax="CHTML"][display="true"] {
     text-align: center !important;
     margin: 1rem 0 !important;
-}
-
-/* Alternative if above doesn't work */
-#blog-content mjx-container[display="true"],
-#cv-content mjx-container[display="true"] {
-    display: block !important;
-    text-align: center !important;
-    margin: 1rem auto !important;
 }
 
 footer {
