@@ -138,6 +138,7 @@ main h2 {
 
 #cv-content h1, #cv-content h2, #cv-content h3,
 #blog-content h1, #blog-content h2, #blog-content h3 {
+    font-family: 'Times New Roman', Times, serif;
     color: var(--header-bg);
     margin-top: 1.5rem;
     margin-bottom: 1rem;
