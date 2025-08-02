@@ -50,9 +50,9 @@ D_{2} \\
 \end{bmatrix}
 =
 \begin{bmatrix}
-w_{11} \times D_1 & w_{21} \times D_2 \\
-w_{12} \times D_1 & w_{22} \times D_2 \\
-w_{13} \times D_1 & w_{23} \times D_2 \\
+w_{11} \times D_1 + w_{21} \times D_2 \\
+w_{12} \times D_1 + w_{22} \times D_2 \\
+w_{13} \times D_1 + w_{23} \times D_2 \\
 \end{bmatrix}
   $$
 </div>
