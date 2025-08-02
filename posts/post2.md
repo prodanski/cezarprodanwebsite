@@ -29,21 +29,32 @@ To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributio
   $$
 </div>
 
-Applying this rule to each neural node we get this:
+Applying this rule to each neural node we get this:<br>  
 
 <div style="text-align: center;">
-  <img src="posts/photos/post2/2DCalc.svg" style="width: 45%;" alt="Data connected to the first layer of the network.">
+  <img src="posts/photos/post2/2DCalc.svg" style="width: 60%;" alt="Data connected to the first layer of the network.">
 </div>
   
-And some more text
+It is easy to recognise that this is indeed the result of the matrix multiplication $\mathbf{W} \mathbf{D}$:
 
 <div style="text-align: center;">
   $$
-  \begin{bmatrix}
-  aa & cc & dd \\
-  4 & 5 & 6 \\
-  7 & 8 & 9
-  \end{bmatrix}
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\begin{bmatrix}
+2 & 0 & 1 \\
+1 & 2 & 0 \\
+0 & 1 & 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+4 & 7 & 7 \\
+13 & 16 & 16 \\
+22 & 25 & 25
+\end{bmatrix}
   $$
 </div>
 
