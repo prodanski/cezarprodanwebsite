@@ -58,7 +58,18 @@ w_{13} \times D_1 + w_{23} \times D_2 \\
   $$
 </div>
 
-and some other text 
+This resulting vector then becomes the input for the next layer in the network, and so on.
+<br>  
+
+### So what happens when we batch?
+Let there be another datapoint $\mathbf{O}$. We bring $\mathbf{D}$ and $\mathbf{O}$ together, and our input becomes the $2 \times 2$ matrix
+
+<div style="text-align: center;">
+  $$
+\begin{bmatrix}
+D_{1} & O_{1} \\
+D_{2} & O_{2} \\
+\end{bmatrix}
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
 ## Why Data Science?
