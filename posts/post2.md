@@ -21,19 +21,8 @@ And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>
 <div style="text-align: center;">
   <img src="posts/photos/post2/1DSetup.svg" style="width: 45%;" alt="Data connected to the first layer of the network.">
 </div>
-
-<br>  
-
+ 
 To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection:
-
-$$
-N_n  = \sum_{d} w_{dn}\times \text{D}_{d}
-$$
-
-text
-
-<br>  
-
 
 $$
 \begin{bmatrix}
