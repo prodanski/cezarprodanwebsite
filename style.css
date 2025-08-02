@@ -164,6 +164,21 @@ main h2 {
     text-decoration: underline;
 }
 
+/* Center display math equations */
+.MathJax_Display,
+mjx-container[jax="CHTML"][display="true"] {
+    text-align: center !important;
+    margin: 1rem 0 !important;
+}
+
+/* Alternative if above doesn't work */
+#blog-content mjx-container[display="true"],
+#cv-content mjx-container[display="true"] {
+    display: block !important;
+    text-align: center !important;
+    margin: 1rem auto !important;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
