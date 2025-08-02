@@ -1,5 +1,5 @@
 # On Batching in ML
-# ADDED FOOTS [^2]
+# ADDED FEETS [^2]
 *30<sup>th</sup> of July, 2025*
 
 I have to embarrassingly admit I had this question far too long, working in Data Science.
@@ -56,3 +56,4 @@ $$
 
 
 [^1]: In this article *datapoints* essentially mean individual rows of data.
+[^2]: None of your
