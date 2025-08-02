@@ -27,7 +27,7 @@ To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributio
   $$
   N_n  = \sum_{d} w_{dn}\times \text{D}_{d}
   $$
-<div>
+</div>
 
 Applying this rule to each neural node we get this:
 
