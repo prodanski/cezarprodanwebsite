@@ -231,22 +231,3 @@ sup a:hover {
     text-decoration: none;
     margin-left: 0.25rem;
 }
-
-/* Center MathJax display equations */
-#blog-content .MathJax_Display {
-    text-align: center !important;
-}
-
-#blog-content mjx-container[jax="CHTML"][display="true"] {
-    display: block !important;
-    text-align: center !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-}
-
-#cv-content .MathJax_Display,
-#cv-content mjx-container[jax="CHTML"][display="true"] {
-    display: block !important;
-    text-align: center !important;
-}
-
