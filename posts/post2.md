@@ -29,13 +29,15 @@ $$
 
 And some more text
 
-$$
-\begin{bmatrix}
-aa & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{bmatrix}
-$$
+<div style="text-align: center;">
+  $$
+  \begin{bmatrix}
+  aa & cc & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9
+  \end{bmatrix}
+  $$
+</div>
 
 and some other text 
 
