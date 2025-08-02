@@ -19,6 +19,13 @@ $\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.
 Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.
 <br>  
+
+<div style="text-align: center;">
+  <img src="posts/photos/post2/1DSetup.svg" style="width: 120%;" alt="Description">
+</div>
+
+but also this
+
 ![Neural Network Architecture](posts/photos/post2/1DSetup.svg)
 <br>  
 some more text
