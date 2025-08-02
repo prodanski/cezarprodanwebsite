@@ -165,13 +165,6 @@ main h2 {
     text-decoration: underline;
 }
 
-/* Center display math equations */
-.MathJax_Display,
-mjx-container[jax="CHTML"][display="true"] {
-    text-align: center !important;
-    margin: 1rem 0 !important;
-}
-
 footer {
     text-align: center;
     padding: 2rem;
@@ -237,5 +230,23 @@ sup a:hover {
 .footnote-backref {
     text-decoration: none;
     margin-left: 0.25rem;
+}
+
+/* Center MathJax display equations */
+#blog-content .MathJax_Display {
+    text-align: center !important;
+}
+
+#blog-content mjx-container[jax="CHTML"][display="true"] {
+    display: block !important;
+    text-align: center !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+}
+
+#cv-content .MathJax_Display,
+#cv-content mjx-container[jax="CHTML"][display="true"] {
+    display: block !important;
+    text-align: center !important;
 }
 
