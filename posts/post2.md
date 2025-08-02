@@ -1,5 +1,4 @@
 # On Batching in ML
-# ADDED FEETS [^2]
 *30<sup>th</sup> of July, 2025*
 
 I have to embarrassingly admit I had this question far too long, working in Data Science.
@@ -8,7 +7,7 @@ Ok yeah thanks but **how**? Aren't computers, at their core, able to process onl
 <br>
 
 ## Matrix Multiplication
-What follows is a simplified view, and I have skipped adding biases for simplicity. For a better, more complete demonstration of the inner workings of a Neural Network I recommend [3Blue1Brown's YouTube Series](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi "3B1B on NN").
+What follows is a simplified view of a forwardpass, and I have skipped adding biases and showing activation functions for clarity. For a better, more complete demonstration of the inner workings of a Neural Network I recommend [3Blue1Brown's YouTube Series](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi "3B1B on NN").
 <br>
 <br>
 ### A review of what happens to a single datapoint during forwardpass through a Neural Network:
@@ -16,19 +15,13 @@ Let our first datapoint be a 2D vector:
 $\mathbf{D} = (\text{D1}, \text{D2})$.  
 This datapoint is fed into the first layer of our Neural Network, and let it have 3 nodes:  
 $\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.  
-Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.  
+Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.<br>  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.
-<br>  
-
 <div style="text-align: center;">
-  <img src="posts/photos/post2/1DSetup.svg" style="width: 70%;" alt="Description">
+  <img src="posts/photos/post2/1DSetup.svg" style="width: 60%;" alt="Data connected to the first layer of the network.">
 </div>
 
-but also this
-
-![Neural Network Architecture](posts/photos/post2/1DSetup.svg)
-<br>  
-some more text
+To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection
 
 $$
 \begin{bmatrix}
@@ -56,4 +49,4 @@ $$
 
 
 [^1]: In this article *datapoints* essentially mean individual rows of data.
-[^2]: None of your
+[^2]: Note that there should be activation functions and biases too, however they would clutter the representation and are orthogonal to this exercise.
