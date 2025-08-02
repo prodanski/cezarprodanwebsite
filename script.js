@@ -5,7 +5,13 @@ const blogPosts = [
         title: "Getting Started with Data Science",
         subtitle: "Essential tools and techniques for beginners",
         date: "2024-01-10"
-    }
+    },
+    {
+        filename: "post2.md",
+        title: "Batching",
+        subtitle: "How does it work?",
+        date: "2025-01-02"
+    },
 ];
 
 // Sort posts by date (newest first)
