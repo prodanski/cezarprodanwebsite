@@ -17,11 +17,18 @@ This datapoint is fed into the first layer of our Neural Network, and let it hav
 $\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.  
 Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.<br>  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>  
+
 <div style="text-align: center;">
   <img src="posts/photos/post2/1DSetup.svg" style="width: 45%;" alt="Data connected to the first layer of the network.">
 </div>
+
 <br>  
-To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection
+
+To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection:
+
+$$N_n  = \sum_{d} w_{dn}\times \text{D}_{d}$$
+
+text
 
 $$
 \begin{bmatrix}
