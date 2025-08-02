@@ -130,6 +130,7 @@ main h2 {
 
 /* CV and Blog post content */
 #cv-content, #blog-content {
+    font-family: 'Times New Roman', Times, serif;
     background-color: var(--box-bg);
     padding: 2rem;
     border-radius: 8px;
