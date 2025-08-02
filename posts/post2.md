@@ -26,7 +26,6 @@ aa & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9
 \end{bmatrix}
-$$
 ]\\
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
