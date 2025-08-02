@@ -11,7 +11,7 @@ const blogPosts = [
         title: "Batching",
         subtitle: "How does it work?",
         date: "2025-01-02"
-    },
+    }
 ];
 
 // Sort posts by date (newest first)
