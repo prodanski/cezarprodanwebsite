@@ -8,8 +8,7 @@ Ok yeah thanks but **how**? Aren't computers, at their core, able to process onl
 
 ## Matrix Multiplication
 What follows is a simplified view of a forwardpass, and I have skipped adding biases and showing activation functions for clarity. For a better, more complete demonstration of the inner workings of a Neural Network I recommend [3Blue1Brown's YouTube Series](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi "3B1B on NN").
-<br>
-<br>
+<br>  
 ### A review of what happens to a single datapoint during forwardpass through a Neural Network:
 Let our first datapoint be a 2D vector:  
 $\mathbf{D} = (\text{D1}, \text{D2})$.  
