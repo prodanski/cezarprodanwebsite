@@ -23,10 +23,18 @@ And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>
  
 To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection:
 
+<div style="text-align: center;">
   $$
   N_n  = \sum_{d} w_{dn}\times \text{D}_{d}
   $$
+<div>
 
+Applying this rule to each neural node we get this:
+
+<div style="text-align: center;">
+  <img src="posts/photos/post2/2DCalc.svg" style="width: 45%;" alt="Data connected to the first layer of the network.">
+</div>
+  
 And some more text
 
 <div style="text-align: center;">
