@@ -45,39 +45,45 @@
         gfm: true
     });
 
-    // Load and render CV markdown
-    fetch('cv.md')
-        .then(response => response.text())
-        .then(markdown => {
-            // Protect LaTeX from marked.js
-            const latex = [];
-            let protectedContent = markdown;
-            
-            // Extract and protect display math
-            protectedContent = protectedContent.replace(/\$\$([\s\S]*?)\$\$/g, (match, math) => {
-                latex.push(match);
-                return `<!--LATEX-${latex.length - 1}-->`;
+    // Get the blog post filename from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const postFile = urlParams.get('post');
+    
+    if (postFile) {
+        fetch(`posts/${postFile}`)
+            .then(response => response.text())
+            .then(markdown => {
+                // Protect LaTeX from marked.js
+                const latex = [];
+                let protectedContent = markdown;
+                
+                // Extract and protect display math
+                protectedContent = protectedContent.replace(/\$\$([\s\S]*?)\$\$/g, (match, math) => {
+                    latex.push(match);
+                    return `<!--LATEX-${latex.length - 1}-->`;
+                });
+                
+                // Extract and protect inline math
+                protectedContent = protectedContent.replace(/\$([^\$\n]+?)\$/g, (match, math) => {
+                    latex.push(match);
+                    return `<!--LATEX-${latex.length - 1}-->`;
+                });
+                
+                // Render markdown
+                let html = marked.parse(protectedContent);
+                
+                // Restore LaTeX
+                latex.forEach((tex, i) => {
+                    html = html.replace(`<!--LATEX-${i}-->`, tex);
+                });
+                
+                document.getElementById('blog-content').innerHTML = html;
+                
+                // Tell MathJax to process the new content
+                MathJax.typesetPromise();
             });
-            
-            // Extract and protect inline math
-            protectedContent = protectedContent.replace(/\$([^\$\n]+?)\$/g, (match, math) => {
-                latex.push(match);
-                return `<!--LATEX-${latex.length - 1}-->`;
-            });
-            
-            // Render markdown
-            let html = marked.parse(protectedContent);
-            
-            // Restore LaTeX
-            latex.forEach((tex, i) => {
-                html = html.replace(`<!--LATEX-${i}-->`, tex);
-            });
-            
-            document.getElementById('cv-content').innerHTML = html;
-            
-            // Tell MathJax to process the new content
-            MathJax.typesetPromise();
-        });
+    }
+</script>
 </script>
 </body>
 </html>
