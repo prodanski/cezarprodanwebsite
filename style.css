@@ -201,6 +201,13 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+/* Hide the auto-generated "Footnotes" heading */
+.footnotes h2,
+.footnotes h3,
+.footnotes h4 {
+    display: none;
+}
+
 /* Footnote references in text */
 sup {
     font-size: 0.8rem;
