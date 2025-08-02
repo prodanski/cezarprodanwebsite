@@ -18,8 +18,10 @@ This datapoint is fed into the first layer of our Neural Network, and let it hav
 $\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.  
 Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.
-<br>
+<br>  
 ![Neural Network Architecture](photos/post2/1DSetup.svg)
+<br>  
+some more text
 
 $$
 \begin{bmatrix}
