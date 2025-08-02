@@ -26,20 +26,22 @@ And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>
 
 To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection:
 
-$$N_n  = \sum_{d} w_{dn}\times \text{D}_{d}$$
+$$
+N_n  = \sum_{d} w_{dn}\times \text{D}_{d}
+$$
 
 text
 
 <br>  
 
 
-\\[
+$$
 \begin{bmatrix}
-kk & 2 & 3 \\
+aa & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9
 \end{bmatrix}
-\\]
+$$
 
 $$
 \begin{pmatrix}
