@@ -17,28 +17,17 @@ This datapoint is fed into the first layer of our Neural Network, and let it hav
 $\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.  
 Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.<br>  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>  
-
-<div style="text-align: center;">
-  <img src="posts/photos/post2/1DSetup.svg" style="width: 45%;" alt="Data connected to the first layer of the network.">
-</div>
  
 To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection:
 
-$$
+\\[
 \begin{bmatrix}
 aa & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9
 \end{bmatrix}
 $$
-
-$$
-\begin{pmatrix}
-A & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{pmatrix}
-$$
+]\\
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
 ## Why Data Science?
