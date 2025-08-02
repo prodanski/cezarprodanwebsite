@@ -30,6 +30,9 @@ $$N_n  = \sum_{d} w_{dn}\times \text{D}_{d}$$
 
 text
 
+<br>  
+
+
 $$
 \begin{bmatrix}
 1 & 2 & 3 \\
