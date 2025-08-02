@@ -56,10 +56,7 @@
     if (postFile) {
         fetch(`posts/${postFile}`)
             .then(response => response.text())
-            .then(markdown => {
-                // ''' Render markdown with footnotes
-                document.getElementById('blog-content').innerHTML = marked.parse(markdown);
-                
+            .then(markdown => {                
                 // Protect LaTeX from marked.js
                 const latex = [];
                 let protectedContent = markdown;
