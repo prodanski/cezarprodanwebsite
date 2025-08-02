@@ -29,6 +29,7 @@ To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributio
   $$
 </div>
 
+<br>  
 Applying this rule to each neural node we get this:<br>  
 
 <div style="text-align: center;">
