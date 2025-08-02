@@ -9,6 +9,13 @@ Ok yeah thanks but **how**? Aren't computers, at their core, able to process onl
 
 ## Matrix Multiplication
 Let's begin by reviewing what happens with to a datapoint during a single forwardpass through a NN. 
+$$
+\begin{pmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i
+\end{pmatrix}
+$$
 
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
