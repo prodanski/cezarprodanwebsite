@@ -19,13 +19,13 @@ And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>
  
 To calculate the output of our layer $\mathbf{N}$ we add[^2] all the contributions from each connection:
 hehe
-\\[
+$$
 \begin{bmatrix}
 aa & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9
 \end{bmatrix}
-\\]
+$$
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
 ## Why Data Science?
