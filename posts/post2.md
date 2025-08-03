@@ -144,7 +144,7 @@ Let us perform a very simple operation on the array $[2, 3, 4, 5]$, and add 1 to
 `cited from Claude:` "The CPU literally has multiple arithmetic logic units (ALUs) that can operate in parallel on different parts of the wide register. It's not doing the operations sequentially - there are physically separate circuits doing the math simultaneously."
 
 <div class="svg-container">
-  <img src="https://en.algorithmica.org/hpc/simd/img/simd.png" alt="Description" class="svg-image">
+  <img src="https://en.algorithmica.org/hpc/simd/img/simd.png" style="width: 30%;" alt="Description" class="svg-image">
 </div>
 
 
