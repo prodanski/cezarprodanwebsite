@@ -231,3 +231,10 @@ sup a:hover {
     text-decoration: none;
     margin-left: 0.25rem;
 }
+
+.svg-image,
+#blog-content img[src$=".svg"],
+#cv-content img[src$=".svg"] {
+    color-scheme: light;
+    forced-color-adjust: none;
+}
