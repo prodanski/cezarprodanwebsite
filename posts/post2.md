@@ -40,7 +40,7 @@ We recognise that this is indeed the result of the matrix multiplication $\mathb
 <div style="text-align: center;">
   $$
 \begin{bmatrix}
-\colorbox{#FFF2CC}{$w_{11}$} & w_{21} \\
+w_{11} & w_{21} \\
 w_{12} & w_{22} \\
 w_{13} & w_{23} \\
 \end{bmatrix}
@@ -50,9 +50,9 @@ D_{2} \\
 \end{bmatrix}
 =
 \begin{bmatrix}
-w_{11} \times D_1 + w_{21} \times D_2 \\
-w_{12} \times D_1 + w_{22} \times D_2 \\
-w_{13} \times D_1 + w_{23} \times D_2 \\
+\colorbox{#FFF2CC}{$w_{11} \times D_1 + w_{21} \times D_2$} \\
+\colorbox{#182E44}{$w_{12} \times D_1 + w_{22} \times D_2$} \\
+\colorbox{#1F2F1E}{$w_{13} \times D_1 + w_{23} \times D_2$} \\
 \end{bmatrix}
   $$
 </div>
