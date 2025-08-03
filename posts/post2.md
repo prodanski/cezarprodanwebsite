@@ -77,7 +77,7 @@ Let there be another datapoint $\mathbf{K}$. We bring $\mathbf{D}$ and $\mathbf{
 For the forward propagation of this input matrix we treat each column as an individual datapoint (which it is) and perform the procedure as before, storing each result:
 
 <div style="text-align: center;">
-  <img src="posts/photos/post2/2DFullCol.svg" style="width: 98%;" alt="Data connected to the first layer of the network.">
+  <img src="posts/photos/post2/2DFullCol2.svg" style="width: 98%;" alt="Data connected to the first layer of the network.">
 </div>
 
 <br>  
