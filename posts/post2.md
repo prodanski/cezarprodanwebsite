@@ -14,7 +14,7 @@ Let our first datapoint be a 2D vector:
 $\mathbf{D} = (\text{D1}, \text{D2})$.  
 This datapoint is fed into the first layer of our Neural Network, and let it have 3 nodes:  
 $\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.  
-Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.<br>  
+Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $\mathbf{W} = w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.<br>  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>  
 
 <div style="text-align: center;">
@@ -36,7 +36,7 @@ Applying this rule to each neural node we get this:<br>
   <img src="posts/photos/post2/2DCalc.svg" style="width: 80%;" alt="Data connected to the first layer of the network.">
 </div>
 <br>  
-It is easy to recognise that this is indeed the result of the matrix multiplication $\mathbf{W} \mathbf{D}$:
+We recognise that this is indeed the result of the matrix multiplication $\mathbf{W} \mathbf{D}$:
 
 <div style="text-align: center;">
   $$
@@ -62,14 +62,50 @@ This resulting vector then becomes the input for the next layer in the network, 
 <br>  
 
 ### So what happens when we batch?
-Let there be another datapoint $\mathbf{O}$. We bring $\mathbf{D}$ and $\mathbf{O}$ together, and our input becomes the $2 \times 2$ matrix
+Let there be another datapoint $\mathbf{K}$. We bring $\mathbf{D}$ and $\mathbf{K}$ together, and our input becomes the $2 \times 2$ matrix $\mathbf{I}$:
+
+<div style="text-align: center;">
+  $$
+  \mathbf{I} = 
+  \begin{bmatrix}
+  D_{1} & K_{1} \\
+  D_{2} & K_{2} \\
+  \end{bmatrix}
+  $$
+</div>
+<br>
+
+For the forward propagation of this input matrix we treat each column as an individual datapoint (which it is) and perform the procedure as before, storing each result:
+
+<div style="text-align: center;">
+  <img src="posts/photos/post2/2DFull.svg" style="width: 80%;" alt="Data connected to the first layer of the network.">
+</div>
+<br>  
+
+Which, as before, is the mathematical equivalent of the matrix multiplication $\mathbf{I} \mathbf{W}$:
 
 <div style="text-align: center;">
   $$
 \begin{bmatrix}
-D_{1} & O_{1} \\
-D_{2} & O_{2} \\
+w_{11} & w_{21} \\
+w_{12} & w_{22} \\
+w_{13} & w_{23} \\
 \end{bmatrix}
+\begin{bmatrix}
+D_{1} & K_1 \\
+D_{2} & K_2 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+w_{11} \times D_1 + w_{21} \times D_2 & w_{11} \times K_1 + w_{21} \times K_2\\
+w_{12} \times D_1 + w_{22} \times D_2 & w_{12} \times K_1 + w_{22} \times K_2 \\
+w_{13} \times D_1 + w_{23} \times D_2 & w_{12} \times K_1 + w_{22} \times K_2\\
+\end{bmatrix}
+  $$
+</div>
+<br>  
+The resultant is also a 
+
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
 ## Why Data Science?
