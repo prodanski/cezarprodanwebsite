@@ -4,7 +4,6 @@
 I have to embarrassingly admit that I had this question for far too long, working in Data Science.
 Sure, I'd heard the usual *'it's how many datapoints[^1] your network ingests at once.* <br>  
 Ok yeah thanks but **how**? Aren't computers, at their core, able to process only a single operation at a time?
-<br>
 
 ## Matrix Multiplication
 What follows is a simplified view of a forwardpass, and I have skipped adding biases and showing activation functions for clarity. For a better, more complete demonstration of the inner workings of a Neural Network I recommend [3Blue1Brown's YouTube Series](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi "3B1B on NN").
@@ -108,7 +107,9 @@ Which, as before, is the mathematical equivalent of the matrix multiplication $\
 
 <br>  
 The resultant is also a $2 \times 2$ vector, and it becomes the input for the next neural layer.  
+<br>  
 All we did was expand the input matrix into another dimension (horizontally in this representation), and process 2 datapoints simultaneously, using the same weights.  
+<br>  
 Matrix multiplication is the mathematical equivalent of that, and it ensures that while we process everything simultaneously, each datapoint and its resultant are *orthogonal* to other datapoints.
 <br>  
 For the gradient descent, in the same __LinAlg__ manner, we compute the gradients for $\mathbf{D}$ and $\mathbf{K}$ together, in matrix form. These gradients are then averaged out to obtain a final gradient, used to update the weights. 
