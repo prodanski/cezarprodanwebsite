@@ -116,14 +116,15 @@ Matrix multiplication is the mathematical equivalent of that, and it ensures tha
 For the gradient descent, in the same $\textit{LinAlg}$ manner, we compute the gradients for $\mathbf{D}$ and $\mathbf{K}$ simultaneously, in matrix form. These gradients are then averaged out to obtain a final gradient, used to update the weights.
 <br>  
 <br>  
-And there we are! We have passed a dataset with $\verbatim{batch_size}=2$.
+And there we are! We have passed a dataset with $\verb|batch_size|=2$.
 
 #### A note on tensors
 For those among us of a physics persuasion, [a tensor is a thing that transforms like a tensor](https://www.reddit.com/r/physicsmemes/comments/s4h0dv/tensors/). But in more practical terms one could think of it as a multidimensional matrix (yeah, I said it). In this article the datapoints we examined are 2-dimensional, but as you might expect, data comes in all shapes and sizes. Whatever the dimensionality of your data, when you batch a dataset it gains an extra dimension (along which datapoints are stacked). I suspect that's what gave rise to namings like TensorFlow, in which the inherent shape of your Dataset object is (batch_size, num_features).
 
 
 ## Physical Process: SIMD, I think
-
+The most correct answer I can give to this is `I don't really know, to be fair.' The science of chip architecture, CUDA programming, and GPU manufacturing is fascinating, but extremely complex. From the research I've done to answer this, with absolutely no claim to expertise in this area, I found an answer that at least allows me to finally catch some sleep:<br>  
+<br>  
 
 
 
