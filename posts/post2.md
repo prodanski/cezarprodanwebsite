@@ -40,7 +40,7 @@ We recognise that this is indeed the result of the matrix multiplication $\mathb
 <div style="text-align: center;">
   $$
 \begin{bmatrix}
-\colorbox{#ffeeee}{$w_{11}$} & w_{21} \\
+\colorbox{#FFF2CC}{$w_{11}$} & w_{21} \\
 w_{12} & w_{22} \\
 w_{13} & w_{23} \\
 \end{bmatrix}
