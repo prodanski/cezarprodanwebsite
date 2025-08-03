@@ -147,6 +147,12 @@ Let us perform a very simple operation on the array $[2, 3, 4, 5]$, and add 1 to
   <img src="https://en.algorithmica.org/hpc/simd/img/simd.png" style="width: 40%;" alt="Description" class="svg-image">
 </div>
 
+A neat observation is that these registers usually came in sizes of integer powers of 2: I suppose this might be the reason behind the tradition of having $2^{n}$ batch sizes.
+In GPUs, this is scaled up even further. It is important to note that FPUs (for floating point calculations).  
+<br>
+
+The reality is, of course, much more complicated than that. For now I am however satisfied with the answer to the question of  
+**how do computers execute batching in ML?**
 
 
 
