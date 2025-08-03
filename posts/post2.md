@@ -121,17 +121,15 @@ And there we are! We have passed a dataset with $\verb|batch_size|=2$.
 <br>  
 
 #### A note on tensors
-<br>  
+
 For those among us of a physics persuasion, [a tensor is a thing that transforms like a tensor](https://www.reddit.com/r/physicsmemes/comments/s4h0dv/tensors/). But in more practical terms one could think of it as a multidimensional matrix (yeah, I said it). In this article the datapoints we examined were 2-dimensional, but as you might expect, data comes in all shapes and sizes. Whatever the dimensionality of your data, when you batch a dataset, it gains an extra dimension (along which datapoints are stacked). I suspect that's what gave rise to namings like TensorFlow, in which the inherent shape of your Dataset object is <br>  
-(batch_size, num_features).
+`(batch_size, num_features)`.
 
 
 ## Physical Process: [SIMD](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data), I think
-The correct answer I can give is "I don't really know, to be fair." The science of chip architecture, CUDA programming, and GPU manufacturing is fascinating, but extremely complex. From the research I've done to answer this, with absolutely no claim to expertise in the area, I found an answer that at least allows me to finally catch some sleep:<br>  
-<br>  
+The correct answer I can give is "I don't really know, to be fair." The science of chip architecture, CUDA programming, and GPU manufacturing is fascinating, but extremely complex. From the research I've done to answer this, with absolutely no claim to expertise in the area, I found an answer that at least allows me to finally catch some sleep:
 #### Vectorisation
 is the top-level answer, which left me unsatisfied. But vectorisation is the reason why pandas dataframes are a bazillion times faster when you use them properly, and quash the impulse to do a `for` loop over the dataframe. It is also what allows computers to perform simultaneous calculations on all the elements of a vector (or matrix). <br>  
-<br>
 C(G)PUs have very wide registers, and multiple separate [ALUs](https://en.wikipedia.org/wiki/Arithmetic_logic_unit).  
 Let us perform a very simple operation on the array $[2, 3, 4, 5]$, and add 1 to each element. Instead of looping over the array and performing 4 additions, we:
 1. Load $[2, 3, 4, 5]$ into a register
@@ -142,6 +140,12 @@ Let us perform a very simple operation on the array $[2, 3, 4, 5]$, and add 1 to
    c. ALU3: ADD 4, 1
    d. ALU4: ADD 5, 1
 4. Store the resulting vector in a third register
+
+`cited from Claude:` "The CPU literally has multiple arithmetic logic units (ALUs) that can operate in parallel on different parts of the wide register. It's not doing the operations sequentially - there are physically separate circuits doing the math simultaneously."
+
+<div class="svg-container">
+  <img src="https://example.com/image.jpg](https://en.algorithmica.org/hpc/simd/img/simd.png" alt="Description" class="svg-image">
+</div>
 
 
 
