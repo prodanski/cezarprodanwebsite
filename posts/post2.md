@@ -123,7 +123,7 @@ And there we are! We have passed a dataset with $\verb|batch_size|=2$.
 #### A note on tensors
 
 For those among us of a physics persuasion, [a tensor is a thing that transforms like a tensor](https://www.reddit.com/r/physicsmemes/comments/s4h0dv/tensors/). But in more practical terms one could think of it as a multidimensional matrix (yeah, I said it). In this article the datapoints we examined were 2-dimensional, but as you might expect, data comes in all shapes and sizes. Whatever the dimensionality of your data, when you batch a dataset, it gains an extra dimension (along which datapoints are stacked). I suspect that's what gave rise to namings like TensorFlow, in which the inherent shape of your Dataset object is <br>  
-`(batch_size, num_features)`.
+$\verb|(batch_size, num_features)|$.
 
 
 ## Physical Process: [SIMD](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data), I think
@@ -141,17 +141,17 @@ Let us perform a very simple operation on the array $[2, 3, 4, 5]$, and add 1 to
     d. ALU4: ADD 5, 1
   4. Store the resulting vector in a third register
 
-`cited from Claude:` "The CPU literally has multiple arithmetic logic units (ALUs) that can operate in parallel on different parts of the wide register. It's not doing the operations sequentially - there are physically separate circuits doing the math simultaneously."
+$\verb|cited from Claude:|$ "The CPU literally has multiple arithmetic logic units (ALUs) that can operate in parallel on different parts of the wide register. It's not doing the operations sequentially - there are physically separate circuits doing the math simultaneously."
 
 <div class="svg-container">
   <img src="https://en.algorithmica.org/hpc/simd/img/simd.png" style="width: 40%;" alt="Description" class="svg-image">
 </div>
 
 A neat observation is that these registers usually came in sizes of integer powers of 2: I suppose this might be the reason behind the tradition of having $2^{n}$ batch sizes.
-In GPUs, this is scaled up even further. It is important to note that FPUs (for floating point calculations).  
+In GPUs, this is scaled up even further. It is important to note that FPUs (for floating point calculations) are also a thing.  
 <br>
 
-The reality is, of course, much more complicated than that. For now I am however satisfied with the answer to the question of  
+The reality is, of course, much more complicated than that. For now I am, however, satisfied with the answer to the question of  
 **how do computers execute batching in ML?**
 
 
