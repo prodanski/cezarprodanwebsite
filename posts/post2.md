@@ -132,19 +132,19 @@ The correct answer I can give is "I don't really know, to be fair." The science 
 is the top-level answer, which left me unsatisfied. But vectorisation is the reason why pandas dataframes are a bazillion times faster when you use them properly, and quash the impulse to do a `for` loop over the dataframe. It is also what allows computers to perform simultaneous calculations on all the elements of a vector (or matrix). <br>  
 C(G)PUs have very wide registers, and multiple separate [ALUs](https://en.wikipedia.org/wiki/Arithmetic_logic_unit).  
 Let us perform a very simple operation on the array $[2, 3, 4, 5]$, and add 1 to each element. Instead of looping over the array and performing 4 additions, we:
-1. Load $[2, 3, 4, 5]$ into a register
-2. Load the vector $[1, 1, 1, 1]$ into another register
-3. Execute a single SIMD ADD instruction that tells 4 separate arithmetic units to simultaneously compute:
-   a. ALU1: ADD 2, 1
-   b. ALU2: ADD 3, 1
-   c. ALU3: ADD 4, 1
-   d. ALU4: ADD 5, 1
-4. Store the resulting vector in a third register
+  1. Load $[2, 3, 4, 5]$ into a register
+  2. Load the vector $[1, 1, 1, 1]$ into another register
+  3. Execute a single SIMD ADD instruction that tells 4 separate arithmetic units to simultaneously compute:
+    a. ALU1: ADD 2, 1
+    b. ALU2: ADD 3, 1
+    c. ALU3: ADD 4, 1
+    d. ALU4: ADD 5, 1
+  4. Store the resulting vector in a third register
 
 `cited from Claude:` "The CPU literally has multiple arithmetic logic units (ALUs) that can operate in parallel on different parts of the wide register. It's not doing the operations sequentially - there are physically separate circuits doing the math simultaneously."
 
 <div class="svg-container">
-  <img src="https://en.algorithmica.org/hpc/simd/img/simd.png" style="width: 30%;" alt="Description" class="svg-image">
+  <img src="https://en.algorithmica.org/hpc/simd/img/simd.png" style="width: 40%;" alt="Description" class="svg-image">
 </div>
 
 
