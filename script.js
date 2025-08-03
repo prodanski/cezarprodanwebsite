@@ -1,16 +1,16 @@
 // Blog posts metadata - add your posts here
 const blogPosts = [
     {
-        filename: "post1.md",
-        title: "Getting Started with Data Science",
-        subtitle: "Essential tools and techniques for beginners",
-        date: "2024-01-10"
+        filename: "post2.md",
+        title: "On Batching in ML",
+        subtitle: "How does it work?",
+        date: "2025-10-02"
     },
     {
-        filename: "post2.md",
-        title: "Batching",
-        subtitle: "How does it work?",
-        date: "2025-01-02"
+        filename: "post1.md",
+        title: "Placeholder",
+        subtitle: "Slop written by Claude",
+        date: "2025-01-25"
     }
 ];
 
