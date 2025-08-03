@@ -32,7 +32,7 @@ To calculate the output of our layer $\mathbf{N}$ we sum[^2] all the contributio
 Applying this rule to each neural node we get this:<br>  
 
 <div style="text-align: center;">
-  <img src="posts/photos/post2/2DCalc.svg" style="width: 80%;" alt="Data connected to the first layer of the network.">
+  <img src="posts/photos/post2/2DCalcCol.svg" style="width: 80%;" alt="Data connected to the first layer of the network.">
 </div>
 <br>  
 We recognise that this is indeed the result of the matrix multiplication $\mathbf{W} \mathbf{D}$:
@@ -77,7 +77,7 @@ Let there be another datapoint $\mathbf{K}$. We bring $\mathbf{D}$ and $\mathbf{
 For the forward propagation of this input matrix we treat each column as an individual datapoint (which it is) and perform the procedure as before, storing each result:
 
 <div style="text-align: center;">
-  <img src="posts/photos/post2/2DFull.svg" style="width: 95%;" alt="Data connected to the first layer of the network.">
+  <img src="posts/photos/post2/2DFullCol.svg" style="width: 98%;" alt="Data connected to the first layer of the network.">
 </div>
 
 <br>  
