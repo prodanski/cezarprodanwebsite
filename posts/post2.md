@@ -11,9 +11,8 @@ What follows is a simplified view of a forwardpass, and I have skipped adding bi
 <br>  
 ### A review of what happens to a single datapoint during forwardpass through a Neural Network:
 Let our first datapoint be a 2D vector:  
-$\mathbf{D} = (\text{D1}, \text{D2})$.  
-This datapoint is fed into the first layer of our Neural Network, and let it have 3 nodes:  
-$\mathbf{N} = (\text{N1}, \text{N2}, \text{N3})$.  
+$\mathbf{D} = [\text{D1}, \text{D2}]$.  
+This datapoint is fed into the first layer of our Neural Network, and let it have 3 nodes: N1, N2, N3.  
 Each element of our datapoint $\mathbf{D}$ is connected to each node in $\mathbf{N}$ by weights: $\mathbf{W} = w_{dn}$, where $d$ is the source element of $\mathbf{D}$, and $n$ is the destination node of $\mathbf{N}$.<br>  
 And, in simpler words, weight $w_{dn}$ goes from $d$ to $n$.<br>  
 
@@ -62,11 +61,11 @@ This resulting vector then becomes the input for the next layer in the network, 
 <br>  
 
 ### So what happens when we batch?
-Let there be another datapoint $\mathbf{K}$. We bring $\mathbf{D}$ and $\mathbf{K}$ together, and our input becomes the $2 \times 2$ matrix $\mathbf{I}$:
+Let there be another datapoint $\mathbf{K}$. We bring $\mathbf{D}$ and $\mathbf{K}$ together, and our input becomes the $2 \times 2$ matrix $\mathbf{X}$:
 
 <div style="text-align: center;">
   $$
-  \mathbf{I} = 
+  \mathbf{X} = 
   \begin{bmatrix}
   D_{1} & K_{1} \\
   D_{2} & K_{2} \\
@@ -82,7 +81,7 @@ For the forward propagation of this input matrix we treat each column as an indi
 </div>
 <br>  
 
-Which, as before, is the mathematical equivalent of the matrix multiplication $\mathbf{I} \mathbf{W}$:
+Which, as before, is the mathematical equivalent of the matrix multiplication $\mathbf{X} \mathbf{W}$:
 
 <div style="text-align: center;">
   $$
@@ -104,7 +103,11 @@ w_{13} \times D_1 + w_{23} \times D_2 & w_{12} \times K_1 + w_{22} \times K_2\\
   $$
 </div>
 <br>  
-The resultant is also a 
+The resultant is also a $2 \times 2$ vector, and it becomes the input for the next neural layer.  
+All we did was expand the input matrix into another dimension (horizontally in this representation), and process 2 datapoints simultaneously, using the same weights.  
+Matrix multiplication is the mathematical equivalent of that, and it ensures that while we process everything simultaneously, each datapoint and its resultant are *orthogonal* to other datapoints.
+<br>  
+For the gradient descent, in the same _LinAlg_ manner, we compute the gradients for $\mathbf{D}$ and $\mathbf{K}$ together, in matrix form. These gradients are then averaged out to obtain a final gradient, used to update the weights. 
 
 
 ## Why do we do powers of 2? (SIMD vs Vector Processors)
