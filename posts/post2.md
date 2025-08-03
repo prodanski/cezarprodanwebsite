@@ -108,6 +108,8 @@ Which, as before, is the mathematical equivalent of the matrix multiplication $\
 <br>  
 The resultant is also a $2 \times 2$ vector, and it becomes the input for the next neural layer.  
 <br>  
+<br>  
+<br>  
 All we did was expand the input matrix into another dimension (horizontally in this representation), and process 2 datapoints simultaneously, using the same weights.  
 <br>  
 Matrix multiplication is the mathematical equivalent of that, and it ensures that while we process everything simultaneously, each datapoint and its resultant are *orthogonal* to other datapoints.
