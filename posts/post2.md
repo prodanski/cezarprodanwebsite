@@ -34,6 +34,7 @@ Applying this rule to each neural node we get this:<br>
 <div style="text-align: center;">
   <img src="posts/photos/post2/2DCalcCol.svg" style="width: 80%;" alt="Data connected to the first layer of the network.">
 </div>
+
 <br>  
 We recognise that this is indeed the result of the matrix multiplication $\mathbf{W} \mathbf{D}$:
 
@@ -72,6 +73,7 @@ Let there be another datapoint $\mathbf{K}$. We bring $\mathbf{D}$ and $\mathbf{
   \end{bmatrix}
   $$
 </div>
+
 <br>
 
 For the forward propagation of this input matrix we treat each column as an individual datapoint (which it is) and perform the procedure as before, storing each result:
@@ -107,7 +109,7 @@ Which, as before, is the mathematical equivalent of the matrix multiplication $\
 <br>  
 The resultant is also a $2 \times 2$ vector, and it becomes the input for the next neural layer.  
 All we did was expand the input matrix into another dimension (horizontally in this representation), and process 2 datapoints simultaneously, using the same weights.  
-Matrix multiplication is the mathematical equivalent of that, and it ensures that while we process everything simultaneously, each datapoint and its resultant are **orthogonal** to other datapoints.
+Matrix multiplication is the mathematical equivalent of that, and it ensures that while we process everything simultaneously, each datapoint and its resultant are *orthogonal* to other datapoints.
 <br>  
 For the gradient descent, in the same __LinAlg__ manner, we compute the gradients for $\mathbf{D}$ and $\mathbf{K}$ together, in matrix form. These gradients are then averaged out to obtain a final gradient, used to update the weights. 
 
