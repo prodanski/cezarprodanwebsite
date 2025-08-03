@@ -97,9 +97,9 @@ Which, as before, is the mathematical equivalent of the matrix multiplication $\
   \end{bmatrix}
   =
   \begin{bmatrix}
-  w_{11} \times D_1 + w_{21} \times D_2 & w_{11} \times K_1 + w_{21} \times K_2\\
-  w_{12} \times D_1 + w_{22} \times D_2 & w_{12} \times K_1 + w_{22} \times K_2 \\
-  w_{13} \times D_1 + w_{23} \times D_2 & w_{12} \times K_1 + w_{22} \times K_2\\
+  \colorbox{#FFF2CC}{$w_{11} \times D_1 + w_{21} \times D_2$} & \colorbox{#4B2D08}{$w_{11} \times K_1 + w_{21} \times K_22$} \\
+  \colorbox{#FFF2CC}{$w_{12} \times D_1 + w_{22} \times D_2$} & \colorbox{#5D7883}{$w_{12} \times K_1 + w_{22} \times K_22$} \\
+  \colorbox{#FFF2CC}{$w_{13} \times D_1 + w_{23} \times D_2$} & \colorbox{#122100}{$w_{12} \times K_1 + w_{22} \times K_22$} \\
   \end{bmatrix}
   $$
 </div>
