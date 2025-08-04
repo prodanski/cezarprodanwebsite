@@ -1,7 +1,10 @@
 # On Batching in ML
 *30<sup>th</sup> of July, 2025*
 
-I have to embarrassingly admit that I had this question for far too long, working in Data Science.
+I have to embarrassingly admit that I had this question for far too long, working in Data Science.<br>  
+<br>  
+**how do computers execute batching in ML?**<br>  
+<br>  
 Sure, I'd heard the usual *'it's how many datapoints[^1] your network ingests at once.* <br>  
 Ok yeah thanks but **how**? Aren't computers, at their core, able to process only a single operation at a time?
 
@@ -106,7 +109,7 @@ Which, as before, is the mathematical equivalent of the matrix multiplication $\
 </div>
 
 <br>  
-The resultant is also a $2 \times 2$ vector, and it becomes the input for the next neural layer.  
+The resultant is also a $2 \times 3$ vector, and it becomes the input for the next neural layer.  
 <br>  
 <br>  
 All we did was expand the input matrix into another dimension (horizontally in this representation), and process 2 datapoints simultaneously, using the same weights.  
@@ -151,7 +154,7 @@ A neat observation is that these registers usually came in sizes of integer powe
 In GPUs, this is scaled up even further. It is important to note that FPUs (for floating point calculations) are also a thing.  
 <br>
 
-The reality is, of course, much more complicated than that. For now I am, however, satisfied with the answer to the question of  
+The reality is, of course, much more complicated than that. For now I am, however, satisfied with the answer to the question  
 **how do computers execute batching in ML?**
 
 
