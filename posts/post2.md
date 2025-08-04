@@ -8,7 +8,7 @@ I have to embarrassingly admit that I had this question for far too long, workin
 Sure, I'd heard the usual *'it's how many datapoints[^1] your network ingests at once.* <br>  
 Ok yeah thanks but **how**? Aren't computers, at their core, able to process only a single operation at a time?
 
-## Mathematical Process: Matrix Multiplication
+## The Mathematical  Explanation: Matrix Multiplication
 What follows is a simplified view of a forwardpass, and I have skipped adding biases and showing activation functions for clarity. For a better, more complete demonstration of the inner workings of a Neural Network I recommend [3Blue1Brown's YouTube Series](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi "3B1B on NN").
 <br>  
 ### A review of what happens to a single datapoint during forwardpass through a Neural Network:
@@ -129,7 +129,7 @@ For those among us of a physics persuasion, [a tensor is a thing that transforms
 $\verb|(batch_size, num_features)|$.
 
 
-## Physical Process: [SIMD](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data), I think
+## The Physical Explanation: [SIMD](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data), I think
 The correct answer I can give is "I don't really know, to be fair." The science of chip architecture, CUDA programming, and GPU manufacturing is fascinating, but extremely complex. From the research I've done to answer this, with absolutely no claim to expertise in the area, I found an answer that at least allows me to finally catch some sleep:
 #### Vectorisation
 is the top-level answer, which left me unsatisfied. But vectorisation is the reason why pandas dataframes are a bazillion times faster when you use them properly, and quash the impulse to do a `for` loop over the dataframe. It is also what allows computers to perform simultaneous calculations on all the elements of a vector (or matrix). <br>  
