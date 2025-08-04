@@ -2,14 +2,14 @@
 const blogPosts = [
     {
         filename: "post2.md",
-        title: "On Batching in ML",
-        subtitle: "How does it work?",
-        date: "2025-10-02"
+        title: "On batching in ML",
+        subtitle: "How do computers process batched data in ML?",
+        date: "2025-07-30"
     },
     {
         filename: "post1.md",
         title: "Placeholder",
-        subtitle: "Slop written by Claude",
+        subtitle: "Slop written by Claude, don't read :)",
         date: "2025-01-25"
     }
 ];
