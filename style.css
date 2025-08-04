@@ -238,3 +238,44 @@ sup a:hover {
     color-scheme: light;
     forced-color-adjust: none;
 }
+
+
+/* Download button */
+.download-container {
+    text-align: center;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    color: var(--header-bg);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 20px;  /* Squircle effect */
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--box-border);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.download-button:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--header-bg);
+}
+
+.download-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add download icon */
+.download-button::before {
+    content: "⬇";
+    font-size: 1.3rem;
+}
