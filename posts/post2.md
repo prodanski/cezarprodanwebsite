@@ -2,8 +2,7 @@
 *30<sup>th</sup> of July, 2025*
 
 I have to embarrassingly admit that I had this question for far too long, working in Data Science.<br>  
-<br>  
-**how do computers execute batching in ML?**<br>  
+**how do computers execute batching in ML?**
 <br>  
 Sure, I'd heard the usual *'it's how many datapoints[^1] your network ingests at once.* <br>  
 Ok yeah thanks but **how**? Aren't computers, at their core, able to process only a single operation at a time?
