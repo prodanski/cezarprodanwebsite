@@ -5,12 +5,6 @@ const blogPosts = [
         title: "On batching in ML",
         subtitle: "How do computers process batched data in ML?",
         date: "2025-07-30"
-    },
-    {
-        filename: "post1.md",
-        title: "Placeholder",
-        subtitle: "Slop written by Claude, don't read :)",
-        date: "2025-01-25"
     }
 ];
 
