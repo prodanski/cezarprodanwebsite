@@ -84,7 +84,7 @@ For the forward propagation of this input matrix we treat each column as an indi
 
 <br>  
 
-Which, as before, is the mathematical equivalent of the matrix multiplication $\mathbf{X} \mathbf{W}$:
+Which, as before, is the mathematical equivalent of the matrix multiplication $\mathbf{W} \mathbf{X}$:
 
 <div style="text-align: center;">
   $$
